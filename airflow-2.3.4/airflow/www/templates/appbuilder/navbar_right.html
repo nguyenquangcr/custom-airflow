@@ -68,7 +68,7 @@ locale_menu(languages) %} {% set locale = session['locale'] %} {% if not locale
     </span>
     <b class="caret"></b>
   </a>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu custom-DropdowMenu">
     <li>
       <a href="{{appbuilder.get_url_for_userinfo}}"
         ><span class="material-icons">account_circle</span>{{_("Your

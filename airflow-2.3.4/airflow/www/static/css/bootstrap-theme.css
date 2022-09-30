@@ -2737,7 +2737,7 @@ tbody.collapse.in {
 }
 .dropdown-menu {
   position: absolute;
-  top: 105%;
+  top: 100%;
   left: 0;
   z-index: 1000;
   display: block;
@@ -2752,7 +2752,7 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   background-color: #fff;
-  border: 1px solid #00000026;
+  border: 1px solid #0000000a;
   border-radius: 10px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -4326,8 +4326,9 @@ a.thumbnail.active {
   color: #245269;
 }
 .alert-warning {
-  background-color: #fcf8e3;
+  background-color: #f3e6a1;
   color: #8a6d3b;
+  border-radius: 12px;
 }
 .alert-warning hr {
   border-top-color: #f7e1b5;

@@ -119,7 +119,7 @@
 
 {% block content %}
   <h2>{{ page_title }}</h2>
-  <div id="main_content">
+  <div id="main_content" class="label-custom-main-contain">
     <div class="row dags-table-header">
       <div class="col-md-4 no-x-padding">
         <div class="form-group btn-group">
@@ -131,11 +131,14 @@
       <div class="col-sm-6 col-md-3">
         <form id="tags_form" style="width: 100%; text-align: left;">
           <div class="form-group search-input" style="width:100%;">
-            <select multiple name="tags" id="tags_filter" class="select2-drop-mask" style="width: 100%;">
-              {% for tag in tags %}
-                <option value="{{ tag.name }}" {% if tag.selected %}selected{% endif %}>{{ tag.name }}</option>
-              {% endfor %}
-            </select>
+            <div class="custom-search">
+              <span class="material-icons" aria-hidden="true">search</span>
+              <select multiple name="tags" id="tags_filter" class="custom-select-cads select2-drop-mask " style="width: 100%;">
+                {% for tag in tags %}
+                  <option value="{{ tag.name }}" {% if tag.selected %}selected{% endif %}>{{ tag.name }}</option>
+                {% endfor %}
+              </select>
+            </div>
             {% if tags_filter|length > 0 %}
               <button type="reset" aria-label="Clear all tags" class="btn btn-default btn-sm material-icons search-input__clear-btn">cancel</button>
             {% endif %}
@@ -146,7 +149,13 @@
         <form id="search_form">
           <div class="form-group search-input" style="width: 100%;">
             <label for="dag_query" class="sr-only">Search DAGs</label>
-            <input type="search" id="dag_query" class="typeahead form-control search-input__input" data-provide="typeahead" style="width:100%;" value="{{search_query}}" autocomplete="off" placeholder="Search DAGs">
+
+            <div class="custom-search">
+              <span class="material-icons" aria-hidden="true">search</span>
+              <input type="search" id="dag_query" class="typeahead form-control search-input__input" 
+              data-provide="typeahead" style="width:100%;" value="{{search_query}}" autocomplete="off" placeholder="Search DAGs"/>
+            </div>
+
             {% if search_query %}
               <button type="reset" aria-label="Clear DAG Search Term" class="btn btn-default btn-sm material-icons search-input__clear-btn">cancel</button>
             {% endif %}

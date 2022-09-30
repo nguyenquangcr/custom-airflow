@@ -203,6 +203,8 @@ function initializeUITimezone() {
 }
 
 $(document).ready(() => {
+  // custom redirect home
+  if (window.location.href.indexOf('home') === -1) document.getElementById('navbarId').href = '/';
   initializeUITimezone();
 
   $('#clock')
@@ -238,7 +240,6 @@ $(document).ready(() => {
 
 const changeNavbarColor = () => {
   if (window.scrollY >= 20) {
-    console.log('abc');
     const element = document.getElementById('navbar');
     element.classList.add('labelScroll');
     // setValueScroll(true);

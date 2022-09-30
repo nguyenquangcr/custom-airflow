@@ -23,7 +23,7 @@
 import logging
 from functools import reduce
 from typing import Dict, List, Union
-
+import os
 from flask import Blueprint, current_app, url_for
 from flask_appbuilder import BaseView, __version__
 from flask_appbuilder.babel.manager import BabelManager
@@ -561,7 +561,11 @@ class AirflowAppBuilder:
 
     @property
     def get_url_for_index(self):
-        return url_for(f"{self.indexview.endpoint}.{self.indexview.default_view}")
+        os.environ['DEFAULT_CADSHOUSE_URL']='dmc.cads-dev.local'
+        if os.getenv('DEFAULT_CADSHOUSE_URL') is not None:
+            return 'http://' + os.getenv('DEFAULT_CADSHOUSE_URL')
+        else:
+            return url_for(f"{self.indexview.endpoint}.{self.indexview.default_view}")
 
     @property
     def get_url_for_userinfo(self):

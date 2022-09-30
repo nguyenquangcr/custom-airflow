@@ -18,6 +18,43 @@
  */
 
 /* chinh css */
+
+/* chinh table list users  */
+.panel-primary {
+  border-color: transparent;
+  background-color: transparent;
+}
+.panel-heading {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.panel-heading .panel-title {
+  font-size: 25px;
+  color: #51504f;
+}
+
+.panel-body .panel-title {
+  font-size: 16px;
+  color: #51504f;
+}
+
+.panel-body {
+  box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%), 0 16px 32px -4px rgb(145 158 171 / 24%);
+  width: 95vw;
+  margin: 5px auto;
+  border-radius: 16px;
+}
+
+#accordion1_href .panel-body{
+  width: 95%;
+  margin: 0 10px;
+  padding: 10px 0;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* chinh tab grid detail dag */
 .react-container .chakra-stack .chakra-text {
   font-size: 13px;
 }
@@ -108,33 +145,33 @@ div.container {
   padding-right: 15px;
 }
 
-.main_content {
+#main_content {
   box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%), 0 16px 32px -4px rgb(145 158 171 / 24%);
   width: 95vw;
   margin: auto;
   border-radius: 16px;
 }
 
-.main_content .table-bordered {
+#main_content .table-bordered {
   border: none;
 
 }
 
-.main_content .dags-table-wrap {
+#main_content .dags-table-wrap {
   background: none;
   padding: 10px;
 }
 
-.main_content .dags-table-body {
+#main_content .dags-table-body {
   width: 98.5%;
   margin: auto;
 }
 
-.main_content .pagination {
+#main_content .pagination {
   margin-left: 25px;
 }
 
-.main_content .custom-current-page {
+#main_content .custom-current-page {
   padding-right: 42px;
 }
 
@@ -219,8 +256,10 @@ div.container {
 }
 
 .label-span-one {
-  font-size: 14.5px;
+  font-size: 16px;
   margin-top: 5px;
+  color: rgb(33, 43, 54);
+  font-weight: 400;
 }
 
 .label-span-two{
